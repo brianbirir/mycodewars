@@ -6,11 +6,9 @@ Complete the function that accepts a string parameter, and reverses each word in
 
 def reverse_words(text):
     
-    words = text.split(' ')
-    
     new_sentence = []
     
-    for w in words:
+    for w in text.split(' '):
   
         # string to list i.e. array
         new_word = list(w)
@@ -27,8 +25,7 @@ def reverse_words(text):
             new_word[start], new_word[end] = new_word[end], new_word[start]
             start += 1
             end -= 1
-            
-        # return "".join(new_word)
+        
         new_sentence.append("".join(new_word))
     
     return " ".join(new_sentence)
